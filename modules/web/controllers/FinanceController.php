@@ -7,7 +7,7 @@ use yii\web\Controller;
 /**
  * Default controller for the `web` module
  */
-class MemberController extends Controller
+class FinanceController extends Controller
 {
     /**
      * Renders the index view for the module
@@ -18,22 +18,16 @@ class MemberController extends Controller
         $this->layout=false;
         return $this->render('index');
     }
-    public function actionInfo()
+
+    public function actionAccount()
     {
         $this->layout=false;
-        return $this->render('info');
+        return $this->render('account');
     }
 
-    public function actionSet()
+    public function actionPay_info()
     {
         $this->layout=false;
-        return $this->render('set');
+        return $this->render('pay_info');
     }
-
-    public function  actionComment(){
-        $this->layout=false;
-        return $this->render('comment');
-    }
-
-
 }
