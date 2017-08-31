@@ -13,4 +13,9 @@ class UserController extends Controller
         $this->layout=false;
         return $this->render('bind');
     }
+
+    public function  actionCart(){
+        $this->layout=false;
+        return $this->render('cart');
+    }
 }
