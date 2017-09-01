@@ -20,4 +20,9 @@ class ProductController extends Controller
 
     }
 
+    public function  actionOrder(){
+        $this->layout=false;
+        return $this->render("order");
+    }
+
 }
