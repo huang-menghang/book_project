@@ -25,6 +25,16 @@ class BookController extends Controller
         return $this->render('info');
     }
 
+    public function  actionCat(){
+        $this->layout=false;
+        return $this->render('cat');
+    }
+
+    public  function  actionCat_set(){
+        $this->layout=false;
+        return $this->render('cat_set');
+    }
+
     public function actionSet()
     {
         $this->layout=false;
