@@ -10,18 +10,18 @@ class ProductController extends Controller
     // 商品列表
     public function actionIndex()
     {
-        $this->layout=false;
+        $this->layout="main";
         return $this->render('index');
     }
 
     public function  actionInfo(){
-        $this->layout=false;
+        $this->layout="main";
         return $this->render('info');
 
     }
 
     public function  actionOrder(){
-        $this->layout=false;
+        $this->layout="main";
         return $this->render("order");
     }
 

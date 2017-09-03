@@ -10,7 +10,7 @@ class PayController extends Controller
     // 品牌首页
     public function actionBuy()
     {
-        $this->layout=false;
+        $this->layout="main";
         return $this->render('buy');
     }
 }

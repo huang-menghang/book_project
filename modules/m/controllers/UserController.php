@@ -10,48 +10,48 @@ class UserController extends Controller
 
     public function  actionIndex()
     {
-        $this->layout = false;
+        $this->layout = "main";
         return $this->render('index');
     }
     public function  actionAddress(){
-      $this->layout=false;
+      $this->layout="main";
       return $this->render('address');
     }
 
     public function  actionAddress_set(){
-     $this->layout=false;
+     $this->layout="main";
      return $this->render('address_set');
     }
 
     public function  actionFav(){
-      $this->layout=false;
+      $this->layout="main";
       return $this->render('fav');
     }
 
 
     public function actionBind()
     {
-        $this->layout=false;
+        $this->layout="main";
         return $this->render('bind');
     }
 
     public function  actionCart(){
-        $this->layout=false;
+        $this->layout="main";
         return $this->render('cart');
     }
 
     public  function  actionOrder(){
-        $this->layout=false;
+        $this->layout="main";
         return $this->render("order");
     }
 
     public function  actionComment(){
-        $this->layout=false;
+        $this->layout="main";
         return $this->render("comment");
     }
 
     public function  actionComment_set(){
-        $this->layout=false;
+        $this->layout="main";
         return $this->render("comment_set");
     }
 }

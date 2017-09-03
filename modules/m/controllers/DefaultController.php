@@ -10,7 +10,7 @@ class DefaultController extends Controller
     // 品牌首页
     public function actionIndex()
     {
-        $this->layout=false;
+        $this->layout="main";
         return $this->render('index');
     }
 }
