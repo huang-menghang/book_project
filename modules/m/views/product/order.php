@@ -1,6 +1,4 @@
-
-<div style="min-height: 500px;">
-    <div class="page_title clearfix">
+<div class="page_title clearfix">
         <span>订单提交</span>
     </div>
     <div class="order_box">
@@ -47,5 +45,4 @@
         <input type="hidden" name="sc" value="product">
         <input style="width: 100%;" type="button" value="确定下单" class="red_btn do_order"  />
     </div>
-</div>
 

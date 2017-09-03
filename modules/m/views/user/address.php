@@ -1,5 +1,4 @@
-<div style="min-height: 500px;">
-    <div class="page_title clearfix">
+ <div class="page_title clearfix">
         <span>常用收货地址</span>
     </div>
     <ul class="address_list">
@@ -22,9 +21,7 @@
             </div>
         </li>
     </ul>
-
-
     <div class="op_box">
         <a href="/m/user/address_set" class="red_btn" style="color: #ffffff;">添加新地址</a>
     </div>
-</div>
+

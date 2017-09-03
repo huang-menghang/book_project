@@ -1,5 +1,4 @@
-<div style="min-height: 500px;">
-    <div class="page_title clearfix">
+<div class="page_title clearfix">
         <span>订单列表</span>
     </div>
     <div class="order_box mg-t20">
@@ -340,4 +339,4 @@
             </li>
         </ul>
     </div>
-</div>
+

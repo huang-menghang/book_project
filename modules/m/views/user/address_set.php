@@ -1,5 +1,4 @@
-<div style="min-height: 500px;">
-    <div class="page_title clearfix">
+ <div class="page_title clearfix">
         <span>收货地址</span>
     </div>
     <div class="addr_form_box">
@@ -77,4 +76,3 @@
         <input type="hidden" id="area_id_before" value="0">
         <input type="hidden" id="city_id_before" value="0">
     </div>
-</div>

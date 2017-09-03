@@ -1,6 +1,4 @@
-
-<div style="min-height: 500px;">
-    <div class="order_pro_box">
+<div class="order_pro_box">
         <ul class="order_pro_list">
             <li data-price="78.20">
                 <a href="/m/product/info?id=4" class="pic" >
@@ -22,5 +20,5 @@
     <div class="cart_fixed">
         <a href="/m/product/order?sc=cart" class="billing_btn">结算</a>
         <b>合计：<strong>¥</strong><font id="price">0.00</font></b>
-    </div></div>
+    </div>
 

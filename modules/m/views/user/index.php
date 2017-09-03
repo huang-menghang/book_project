@@ -1,5 +1,5 @@
 
-<div style="min-height: 500px;">
+
     <div class="mem_info">
         <span class="m_pic"><img src="/uploads/avatar/20170313/159419a875565b1afddd541fa34c9e65.jpg" /></span>
         <p>郭威</p>
@@ -17,4 +17,4 @@
         <span><a href="/m/"><i class="home_icon"></i><b>首页</b></a></span>
         <span><a href="/m/product/index"><i class="store_icon"></i><b>图书</b></a></span>
         <span><a href="/m/user/index" class="aon"><i class="member_icon"></i><b>我的</b></a></span>
-    </div></div>
+    </div>

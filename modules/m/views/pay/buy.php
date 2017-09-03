@@ -1,6 +1,4 @@
-
-<div style="min-height: 500px;">
-    <div class="order_box">
+<div class="order_box">
         <div class="order_header">
             <h2 style="text-align: center;">支付</h2>
         </div>
@@ -17,4 +15,4 @@
 
     <div class="hide_wrap hidden">
         <input type="hidden" name="pay_order_id" value="33">
-    </div></div>
+    </div>

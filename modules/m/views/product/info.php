@@ -1,5 +1,4 @@
-<div style="min-height: 500px;">
-    <div class="pro_tab clearfix">
+<div class="pro_tab clearfix">
         <span>图书详情</span>
     </div>
     <div class="proban">
@@ -38,5 +37,4 @@
         <input type="button" value="加入购物车" class="add_cart_btn" data="4"/>
         <input type="hidden" name="id" value="4">
     </div>
-</div>
 

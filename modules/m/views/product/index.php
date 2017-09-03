@@ -1,5 +1,4 @@
-<div style="min-height: 500px;">
-    <div class="search_header">
+ <div class="search_header">
         <a href="javascript:void(0);" class="category_icon"></a>
         <input name="kw" type="text" class="search_input" placeholder="请输入您搜索的关键词" value="" />
         <i class="search_icon"></i>
@@ -65,5 +64,5 @@
                 </a>
             </li>
         </ul>
-    </div></div>
+    </div>
 

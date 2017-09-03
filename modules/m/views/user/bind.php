@@ -1,6 +1,4 @@
-
-<div style="min-height: 500px;">
-    <div class="page_title clearfix">
+ <div class="page_title clearfix">
         <span>账号绑定</span>
     </div>
     <div class="login_form_wrap">
@@ -23,5 +21,4 @@
             <input style="width: 100%;" type="button" value="绑定" class="red_btn dologin"  />
         </div>
     </div>
-</div>
 

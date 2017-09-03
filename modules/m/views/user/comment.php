@@ -1,6 +1,4 @@
-
-<div style="min-height: 500px;">
-    <div class="page_title clearfix">
+ <div class="page_title clearfix">
         <span>我的评论</span>
     </div>
     <ul class="address_list">
@@ -21,5 +19,5 @@
             <p>评价内容：服务非常好</p>
         </li>
     </ul>
-</div>
+
 

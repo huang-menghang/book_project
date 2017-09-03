@@ -1,6 +1,4 @@
-
-<div style="min-height: 500px;">
-    <ul class="fav_list">
+<ul class="fav_list">
         <li>
             <a href="/m/product/info?id=2">
                 <i class="pic"><img src="/uploads/book/20170303/a8887738ab1bfd71765dd063fee4ddaa.jpg" style="height: 100px;width: 100px;" /></i>
@@ -18,4 +16,3 @@
             <span class="del_fav" data="3"><i class="del_fav_icon"></i></span>
         </li>
     </ul>
-</div>

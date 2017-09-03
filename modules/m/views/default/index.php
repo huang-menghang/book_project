@@ -1,5 +1,4 @@
-<div style="min-height: 500px;">
-    <div class="shop_header">
+<div class="shop_header">
         <i class="shop_icon"></i>
         <strong>编程浪子的博客</strong>
     </div>
@@ -23,5 +22,5 @@
             <li><a href="javascript:void(0);" style="padding-left: 0.1rem;"><span>品牌介绍：我店是知名的综合性网上购物商城，由国内著名出版机构科文公司、美国老虎基金、美国IDG集团、卢森堡剑桥集团、亚洲创业投资基金（原名软银中国创业基金）共同投资成立。</span></a></li>
         </ul>
     </div>
-</div>
+
 

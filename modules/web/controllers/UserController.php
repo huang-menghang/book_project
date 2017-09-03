@@ -15,7 +15,7 @@ class UserController extends Controller
      */
     public function actionLogin()
     {
-        $this->layout =false;
+        $this->layout ="user";
         return $this->render('login');
     }
     public function actionEdit()
