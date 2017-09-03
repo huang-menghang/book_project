@@ -15,34 +15,34 @@ class BookController extends Controller
      */
     public function actionIndex()
     {
-        $this->layout=false;
+        $this->layout="main";
         return $this->render('index');
     }
 
     public function actionInfo()
     {
-        $this->layout=false;
+        $this->layout="main";
         return $this->render('info');
     }
 
     public function  actionCat(){
-        $this->layout=false;
+        $this->layout="main";
         return $this->render('cat');
     }
 
     public  function  actionCat_set(){
-        $this->layout=false;
+        $this->layout="main";
         return $this->render('cat_set');
     }
 
     public function actionSet()
     {
-        $this->layout=false;
+        $this->layout="main";
         return $this->render('set');
     }
     public function actionImages()
     {
-        $this->layout=false;
+        $this->layout="main";
         return $this->render('images');
     }
 }

@@ -15,19 +15,19 @@ class FinanceController extends Controller
      */
     public function actionIndex()
     {
-        $this->layout=false;
+        $this->layout="main";
         return $this->render('index');
     }
 
     public function actionAccount()
     {
-        $this->layout=false;
+        $this->layout="main";
         return $this->render('account');
     }
 
     public function actionPay_info()
     {
-        $this->layout=false;
+        $this->layout="main";
         return $this->render('pay_info');
     }
 }

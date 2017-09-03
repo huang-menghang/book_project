@@ -15,13 +15,13 @@ class QrcodeController extends Controller
      */
     public function actionIndex()
     {
-        $this->layout=false;
+        $this->layout="main";
         return $this->render('index');
     }
 
     public function actionSet()
     {
-        $this->layout=false;
+        $this->layout="main";
         return $this->render('set');
     }
 }

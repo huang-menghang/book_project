@@ -15,24 +15,24 @@ class StatController extends Controller
      */
     public function actionIndex()
     {
-        $this->layout=false;
+        $this->layout="main";
         return $this->render('index');
     }
 
     public function actionProduct()
     {
-        $this->layout=false;
+        $this->layout="main";
         return $this->render('product');
     }
 
     public function actionMember()
     {
-        $this->layout=false;
+        $this->layout="main";
         return $this->render('member');
     }
     public function actionShare()
     {
-        $this->layout=false;
+        $this->layout="main";
         return $this->render('share');
     }
 }
