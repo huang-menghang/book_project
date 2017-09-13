@@ -6,26 +6,28 @@ use yii\web\Controller;
 
 class MemberController extends Controller
 {
+    public function __construct($id,$module,array $config =[])
+    {
+        parent::__construct($id,$module,$config);
+        $this->layout="main";
+    }
 
     public function actionIndex()
     {
-        $this->layout="main";
         return $this->render('index');
     }
     public function actionInfo()
     {
-        $this->layout="main";
         return $this->render('info');
     }
 
     public function actionSet()
     {
-        $this->layout="main";
         return $this->render('set');
     }
 
-    public function  actionComment(){
-        $this->layout="main";
+    public function  actionComment()
+    {
         return $this->render('comment');
     }
 

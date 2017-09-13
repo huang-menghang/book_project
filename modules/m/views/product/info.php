@@ -1,6 +1,6 @@
 <div class="pro_tab clearfix">
         <span>图书详情</span>
-    </div>
+</div>
     <div class="proban">
         <div id="slideBox" class="slideBox">
             <div class="bd">
@@ -29,7 +29,8 @@
         </div>
     </div>
     <div class="pro_warp">
-        <p><br/></p><p><span style="color: rgb(101, 101, 101); font-family: &quot;Hiragino Sans GB&quot;, Verdana, Simsun; font-size: 14px; background-color: rgb(255, 255, 255);">准备好释放数据的强大潜能了吗？借助于这本《Hadoop权威指南》，你将学习如何使用Apache Hadoop构建和维护稳定性高、伸缩性强的分布式系统。本书是为程序员写的，可帮助他们分析任何大小的数据集。本书同时也是为管理员写的，帮助他们了解如何设置和运行Hadoop集群。</span><br/><span style="color: rgb(101, 101, 101); font-family: &quot;Hiragino Sans GB&quot;, Verdana, Simsun; font-size: 14px; background-color: rgb(255, 255, 255);">　　本书通过丰富的案例学习来解释Hadoop的幕后机理，阐述了Hadoop如何解决现实生活中的具体问题。第3版覆盖Hadoop的*动态，包括新增的MapReduce API，以及MapReduce 2及其灵活性更强的执行模型（YARN）。</span></p><p><span style="color: rgb(101, 101, 101); font-family: &quot;Hiragino Sans GB&quot;, Verdana, Simsun; font-size: 14px; background-color: rgb(255, 255, 255);"><br/></span></p><p><span style="color: rgb(101, 101, 101); font-family: &quot;Hiragino Sans GB&quot;, Verdana, Simsun; font-size: 14px; background-color: rgb(255, 255, 255);"><img src="/uploads/book/20170316/7ea0e8a34deb666126567740be220c9e.jpg"/></span></p></div>
+        <p><br/></p><p><span style="color: rgb(101, 101, 101); font-family: &quot;Hiragino Sans GB&quot;, Verdana, Simsun; font-size: 14px; background-color: rgb(255, 255, 255);">准备好释放数据的强大潜能了吗？借助于这本《Hadoop权威指南》，你将学习如何使用Apache Hadoop构建和维护稳定性高、伸缩性强的分布式系统。本书是为程序员写的，可帮助他们分析任何大小的数据集。本书同时也是为管理员写的，帮助他们了解如何设置和运行Hadoop集群。</span><br/><span style="color: rgb(101, 101, 101); font-family: &quot;Hiragino Sans GB&quot;, Verdana, Simsun; font-size: 14px; background-color: rgb(255, 255, 255);">　　本书通过丰富的案例学习来解释Hadoop的幕后机理，阐述了Hadoop如何解决现实生活中的具体问题。第3版覆盖Hadoop的*动态，包括新增的MapReduce API，以及MapReduce 2及其灵活性更强的执行模型（YARN）。</span></p><p><span style="color: rgb(101, 101, 101); font-family: &quot;Hiragino Sans GB&quot;, Verdana, Simsun; font-size: 14px; background-color: rgb(255, 255, 255);"><br/></span></p><p><span style="color: rgb(101, 101, 101); font-family: &quot;Hiragino Sans GB&quot;, Verdana, Simsun; font-size: 14px; background-color: rgb(255, 255, 255);"><img src="/uploads/book/20170316/7ea0e8a34deb666126567740be220c9e.jpg"/></span></p>
+    </div>
     <div class="pro_fixed clearfix">
         <a href="/m/"><i class="sto_icon"></i><span>首页</span></a>
         <a class="fav" href="javascript:void(0);" data="4"><i class="keep_icon"></i><span>收藏</span></a>

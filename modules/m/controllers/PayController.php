@@ -7,10 +7,15 @@ use yii\web\Controller;
 
 class PayController extends Controller
 {
+    public function __construct($id, $module, array $config = [])
+    {
+        parent::__construct($id, $module, $config = []);
+        $this->layout="main";
+    }
+
     // 品牌首页
     public function actionBuy()
     {
-        $this->layout="main";
         return $this->render('buy');
     }
 }

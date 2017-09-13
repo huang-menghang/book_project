@@ -10,7 +10,7 @@ require(__DIR__ . '/../vendor/yiisoft/yii2/Yii.php');
 $config = require(__DIR__ . '/../config/web.php');
 // 加入版本号
 if(file_exists("e:/book_project_version")){
-    define("RELEASE_VERSION",tirm( file_get_contents("e:/book_project_version")));
+    define("RELEASE_VERSION",trim( file_get_contents("e:/book_project_version")));
 }else{
     define("RELEASE_VERSION",time());
 }

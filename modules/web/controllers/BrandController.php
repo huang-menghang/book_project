@@ -13,21 +13,23 @@ class BrandController extends Controller
      * Renders the index view for the module
      * @return string
      */
+    public function __construct($id,$module,array $config =[])
+    {
+        parent::__construct($id,$module,$config);
+        $this->layout="main";
+    }
     public function actionInfo()
     {
-        $this -> layout = "main";
         return $this->render('info');
     }
 
     public function actionSet()
     {
-        $this -> layout = "main";
         return $this->render('set');
     }
 
     public function actionImages()
     {
-        $this -> layout = "main";
         return $this->render('images');
     }
 }

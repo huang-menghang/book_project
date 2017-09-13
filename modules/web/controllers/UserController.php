@@ -13,6 +13,11 @@ class UserController extends Controller
      * Renders the index view for the module
      * @return string
      */
+    public function __construct($id,$module,array $config =[])
+    {
+        parent::__construct($id,$module,$config);
+        $this->layout="main";
+    }
     public function actionLogin()
     {
         $this->layout ="user";
@@ -20,12 +25,10 @@ class UserController extends Controller
     }
     public function actionEdit()
     {
-        $this->layout ="main";
         return $this->render('edit');
     }
     public function actionResetPwd()
     {
-        $this->layout ="main";
         return $this->render('reset_pwd');
     }
 }
