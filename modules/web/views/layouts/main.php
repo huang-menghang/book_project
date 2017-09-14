@@ -1,5 +1,5 @@
 <!--统一布局文件 -->
-// 前段资源管理器
+<!-- 前段资源管理器-->
 <?php
   use app\assets\WebAsset;
   WebAsset::register($this);

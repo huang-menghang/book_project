@@ -7,7 +7,7 @@ use yii\web\Controller;
 /**
  * Default controller for the `web` module
  */
-class BookController extends Controller
+class BookController extends BaseController
 {
     /**
      * Renders the index view for the module

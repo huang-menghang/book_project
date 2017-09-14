@@ -7,7 +7,7 @@ use yii\web\Controller;
 /**
  * Default controller for the `web` module
  */
-class AccountController extends Controller
+class AccountController extends BaseController
 {
     /**
      * Renders the index view for the module

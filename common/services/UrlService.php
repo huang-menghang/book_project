@@ -6,7 +6,7 @@
  * Time: 17:05
  */
 
-namespace app\common\components;
+namespace app\common\services;
 use yii\helpers\Url;
 
 /**
@@ -20,18 +20,21 @@ use yii\helpers\Url;
 class UrlService
 {
    public static  function  buildWebUrl($path,$params=[]){
+        $domain_config = \Yii::$app->params['domain'];
         $path = Url::toRoute(array_merge([$path],$params));
-        return "/web".$path;
+        return $domain_config['web'].$path;
    }
 
    public static function  buildMUrl($path,$params=[]){
-       $path = Url::toRoute(array_merge([[$path]],$params));
-       return "/m".$path;
+       $domain_config = \Yii::$app->params['domain'];
+       $path = Url::toRoute(array_merge([$path],$params));
+       return $domain_config['m'].$path;
    }
    // www
     public static function  buildWwwUrl($path,$params=[]){
-        $path = Url::toRoute(array_merge([[$path]],$params));
-        return "/m".$path;
+        $domain_config = \Yii::$app->params['domain'];
+        $path = Url::toRoute(array_merge([$path],$params));
+        return  $domain_config['www'].$path;
     }
    // null
     public static function  buildNullUrl(){

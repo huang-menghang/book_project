@@ -7,7 +7,7 @@ use yii\web\Controller;
 /**
  * Default controller for the `web` module
  */
-class FinanceController extends Controller
+class FinanceController extends BaseController
 {
     /**
      * Renders the index view for the module
