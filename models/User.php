@@ -22,6 +22,10 @@ use Yii;
  */
 class User extends \yii\db\ActiveRecord
 {
+    public  function  getSaltPassword($password){
+        return md5( $password.md5($this->login_salt));
+    }
+
     /**
      * @inheritdoc
      */
@@ -66,4 +70,6 @@ class User extends \yii\db\ActiveRecord
             'created_time' => 'Created Time',
         ];
     }
+
+
 }

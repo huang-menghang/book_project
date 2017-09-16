@@ -1,8 +1,8 @@
 <?php
 
 namespace app\modules\web\controllers;
+use app\modules\web\controllers\common\BaseController;
 
-use yii\web\Controller;
 
 /**
  * Default controller for the `web` module

@@ -1,6 +1,5 @@
 <div class="loginColumns animated fadeInDown">
     <div class="row">
-
         <div class="col-md-6 text-center">
             <h2 class="font-bold">编程浪子图书商城管理后台</h2>
             <p>

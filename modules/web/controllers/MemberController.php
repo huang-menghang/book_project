@@ -2,7 +2,9 @@
 
 namespace app\modules\web\controllers;
 
-use yii\web\Controller;
+
+
+use app\modules\web\controllers\common\BaseController;
 
 class MemberController extends BaseController
 {

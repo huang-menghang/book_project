@@ -18,6 +18,8 @@ class BaseController extends BaseWebController
 
     protected $auth_cookie_name = "mooc_book";
 
+    protected  $current_user = null;
+
     public $allowAllAction = [
         'web/user/login',
         'web/user/logout'
@@ -32,7 +34,6 @@ class BaseController extends BaseWebController
     public function beforeAction($action)
     {
         if (in_array($action->getUniqueId(), $this->allowAllAction)) {
-            print "是首页";
             return true;
         }
         //验证是否登录
@@ -70,7 +71,7 @@ class BaseController extends BaseWebController
         if ($auth_token != $this->geneAuthToken($user_info)) {
             return false;
         }
-
+        $this->current_user = $user_info;
         return true;
     }
 
@@ -78,7 +79,6 @@ class BaseController extends BaseWebController
     public function setLoginStatus($user_info)
     {
         $auth_token = $this->geneAuthToken($user_info);
-        print $auth_token . "#" . $user_info['uid'];
         $this->setCookie($this->auth_cookie_name, $auth_token . "#" . $user_info['uid']);
     }
 
