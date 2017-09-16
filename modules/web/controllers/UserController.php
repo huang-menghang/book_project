@@ -41,8 +41,8 @@ class UserController extends BaseController
         }
         // 验证密码
         // 密码加密算法 = md5(login_pwd + md5(login_salt))
-        $auth_pwd = md5($login_pwd . md5($user_info['login_salt']));
-        if ($auth_pwd != $user_info['login_pwd']) {
+       // $auth_pwd = md5($login_pwd . md5($user_info['login_salt']));
+        if (!$user_info->verifyPassword($login_pwd)) {
             return $this->renderJs('请输入正确的用户和密码', UrlService::buildWebUrl("/user/login"));
         }
 
@@ -98,12 +98,12 @@ class UserController extends BaseController
 
         //判断原密码是否一致
         $current_user = $this->current_user;
-        $auth_pwd = md5($old_password.md5($current_user['login_salt']));
-        if($auth_pwd != $current_user['login_pwd']){
+      //  $auth_pwd = md5($old_password.md5($current_user['login_salt']));
+        if(!$current_user->verifyPassword($old_password)){
             return $this->renderJson([],"输入的原密码与旧密码不一致",-1);
         }
 
-        $current_user->login_pwd = md5($new_password.md5($current_user['login_salt']));
+        $current_user->setPassword($new_password);
         $current_user->updated_time = date("Y-m-d H:i:s");
         $current_user->update(0);
       // 设置登录态

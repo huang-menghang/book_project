@@ -1,6 +1,7 @@
 <?php
 
 namespace app\modules\web\controllers;
+use app\models\User;
 use app\modules\web\controllers\common\BaseController;
 
 
@@ -22,8 +23,9 @@ class AccountController extends BaseController
 
     public function actionIndex()
     {
-
-        return $this->render('index');
+       // 从数据库获取数据
+       $list= User::find()->orderBy(["uid"=>SORT_DESC])->all();
+       return $this->render('index',['list'=>$list]);
     }
 
     public function actionSet()

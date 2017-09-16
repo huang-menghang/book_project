@@ -1,4 +1,6 @@
-
+<?php
+use \app\common\services\UrlService;
+?>
         <div class="row  border-bottom">
             <div class="col-lg-12">
                 <div class="tab_title">
@@ -54,42 +56,25 @@
                     </tr>
                     </thead>
                     <tbody>
+                   <?php foreach ($list as $_item):?>
                     <tr>
-                        <td>13</td>
-                        <td>郭威</td>
-                        <td>11012345678</td>
-                        <td>apanly@163.com</td>
+                        <td><?=$_item['uid']?></td>
+                        <td><?=$_item['nickname']?></td>
+                        <td><?=$_item['mobile']?></td>
+                        <td><?=$_item['email']?></td>
                         <td>
-                            <a  href="/web/account/info?id=13">
+                            <a  href="<?= UrlService::buildWebUrl("/account/info",['id'=>$_item['uid']]); ?>">
                                 <i class="fa fa-eye fa-lg"></i>
                             </a>
-                            <a class="m-l" href="/web/account/set?id=13">
+                            <a class="m-l" href="<?= UrlService::buildWebUrl("/account/set",['id'=>$_item['uid']]); ?>">
                                 <i class="fa fa-edit fa-lg"></i>
                             </a>
-
-                            <a class="m-l remove" href="javascript:void(0);" data="13">
+                            <a class="m-l remove" href="javascript:void(0);" data="<?= $_item['uid']?>">
                                 <i class="fa fa-trash fa-lg"></i>
                             </a>
                         </td>
                     </tr>
-                    <tr>
-                        <td>12</td>
-                        <td>编程浪子郭大爷</td>
-                        <td>11012345679</td>
-                        <td>apanly@126.com</td>
-                        <td>
-                            <a  href="/web/account/info?id=12">
-                                <i class="fa fa-eye fa-lg"></i>
-                            </a>
-                            <a class="m-l" href="/web/account/set?id=12">
-                                <i class="fa fa-edit fa-lg"></i>
-                            </a>
-
-                            <a class="m-l remove" href="javascript:void(0);" data="12">
-                                <i class="fa fa-trash fa-lg"></i>
-                            </a>
-                        </td>
-                    </tr>
+                   <?php endforeach;?>
                     </tbody>
                 </table>
                 <div class="row">

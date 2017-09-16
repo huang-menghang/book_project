@@ -25,13 +25,14 @@ var user_edit_ops = {
                  new_password:new_password
              };
              $.ajax({
-                     url:'/web/user/reset-pwd',
+                     url:common_ops.buildWebUrl('/user/reset-pwd'),
                      type:'POST',
                      data:data,
                      dataType:'json',
                      success:function(res){
                          btn_target.removeClass("disabled");
                          if(res.code == 200){
+                             alert("set ok ..");
                              window.location.href = window.location.href;
                          }else{
                              alert(res.msg);
