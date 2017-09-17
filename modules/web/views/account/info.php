@@ -8,7 +8,8 @@
                     </ul>
                 </div>
             </div>
-        </div><div class="row m-t">
+ </div>
+ <div class="row m-t">
             <div class="col-lg-12">
                 <div class="row">
                     <div class="col-lg-12">
