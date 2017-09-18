@@ -1,3 +1,4 @@
+;
 var user_edit_ops = {
     init:function () {
         this.eventBind();
@@ -6,17 +7,17 @@ var user_edit_ops = {
         $(".save").click( function() {
             var btn_target = $(this);
             if(btn_target.hasClass("disabled")){
-                 alert("正在处理,请不要重复点击--");
+                common_ops.alert("正在处理,请不要重复点击--");
                  return false;
             }
             var nickname = $(".user_edit_wrap input[name='nickname']").val();
             var email = $(".user_edit_wrap input[name='email']").val();
             if( nickname.length < 1){
-                alert("请输入合法的姓名--");
+                common_ops.tip("请输入合法的姓名--",$(".user_edit_wrap input[name='nickname']"));
                 return false;
             }
             if(email.length < 1){
-                alert("请输入合法的邮箱地址--");
+                common_ops.tip("请输入合法的邮箱地址--",$(".user_edit_wrap input[name='email']"));
                 return false;
             }
             var data = {
@@ -30,12 +31,14 @@ var user_edit_ops = {
                 data:data,
                 dataType:'json',
                 success:function(res){
+                    callback = null;
                     btn_target.removeClass("disabled");
-                    if(res.code == 200){
-                       window.location.href = window.location.href;
-                   }else{
-                        alert(res.msg);
+                    if(res.code == 200) {
+                        callback = function () {
+                            window.location.href = window.location.href;
+                        };
                     }
+                    common_ops.alert(res.msg,callback);
 
                 }
             });
