@@ -60,7 +60,7 @@ var user_edit_ops = {
     }
 };
 $(document).ready(
-    function () {
-        user_edit_ops.init();
+    function () { user_edit_ops.init();
+
     }
 );

@@ -37,7 +37,7 @@ StaticService::includeAppJsStatic("/js/web/account/index.js", app\assets\WebAsse
             <hr/>
             <div class="row">
                 <div class="col-lg-12">
-                    <a class="btn btn-w-m btn-outline btn-primary pull-right" href="/web/account/set">
+                    <a class="btn btn-w-m btn-outline btn-primary pull-right" href="<?=UrlService::buildWebUrl("/account/set")?>">
                         <i class="fa fa-plus"></i>账号
                     </a>
                 </div>

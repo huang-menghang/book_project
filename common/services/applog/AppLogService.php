@@ -10,11 +10,12 @@ namespace app\common\services\applog;
 
 
 use app\common\services\UtilService;
+use app\models\AppAccessLog;
 use app\models\AppLog;
 
 class AppLogService
 {
-  // 记录错误日志
+    // 记录错误日志
     public  static  function  addErrorLog($appname,$content){
         $error = \Yii::$app->errorHandler->exception;
 
@@ -39,6 +40,38 @@ class AppLogService
         }
         $model_app_logs ->created_time = date("Y-m-d H:i:s");
         $model_app_logs->save(0);
+
+    }
+
+    // 记录用户访问日志
+    public static function  addAppAccessLog($uid = 0){
+        $get_params = \Yii::$app->request->get();
+        $post_params = \Yii::$app->request->post();
+
+        $target_url = isset($_SERVER['REQUEST_URI'])?$_SERVER['REQUEST_URI']:'';
+        $refer = isset($_SERVER['HTTP_REFERER'])?$_SERVER['HTTP_REFERER']:'';
+        $ua = isset($_SERVER['HTTP_USER_AGENT'])?$_SERVER['HTTP_USER_AGENT']:'';
+
+        $access_log = new AppAccessLog();
+
+        $access_log ->uid = $uid;
+        $access_log ->referer_url = $refer;
+        $access_log ->target_url = $target_url;
+        $access_log ->query_params = json_encode(array_merge($get_params,$post_params));
+        $access_log ->ua = $ua;
+        $access_log ->ip = UtilService::getIP();
+        $access_log -> created_time = date("Y-m-d H:i:s");
+
+        return $access_log->save(0);
+
+
+
+
+
+
+
+
+
 
     }
 
