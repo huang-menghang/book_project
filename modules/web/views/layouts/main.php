@@ -2,6 +2,7 @@
 <!-- 前段资源管理器-->
 <?php
   use app\assets\WebAsset;
+  use \app\common\services\UrlService;
   WebAsset::register($this);
 ?>
 <?php $this->beginPage();?>
@@ -22,37 +23,37 @@
             <ul class="nav metismenu" id="side-menu">
                 <li class="nav-header">
                     <div class="profile-element text-center">
-                        <img alt="image" class="img-circle" src="/images/web/logo.png" />
+                        <img alt="image" class="img-circle" src="<?=UrlService::buildWwwUrl("/images/web/logo.png")?>" />
                         <p class="text-muted">编程浪子</p>
                     </div>
                     <div class="logo-element">
-                        <img alt="image" class="img-circle" src="/images/web/logo.png" />
+                        <img alt="image" class="img-circle" src="<?=UrlService::buildWwwUrl("/images/web/logo.png")?>" />
                     </div>
                 </li>
                 <li class="dashboard">
-                    <a href="/web/dashboard/index"><i class="fa fa-dashboard fa-lg"></i>
+                    <a href="<?=UrlService::buildWebUrl("/dashboard/index")?>"><i class="fa fa-dashboard fa-lg"></i>
                         <span class="nav-label">仪表盘</span></a>
                 </li>
                 <li class="account">
-                    <a href="/web/account/index"><i class="fa fa-user fa-lg"></i> <span class="nav-label">账号管理</span></a>
+                    <a href="<?=UrlService::buildWebUrl("/account/index")?>"><i class="fa fa-user fa-lg"></i> <span class="nav-label">账号管理</span></a>
                 </li>
                 <li class="brand">
-                    <a href="/web/brand/info"><i class="fa fa-cog fa-lg"></i> <span class="nav-label">品牌设置</span></a>
+                    <a href="<?=UrlService::buildWebUrl("/brand/info")?>"><i class="fa fa-cog fa-lg"></i> <span class="nav-label">品牌设置</span></a>
                 </li>
                 <li class="book">
-                    <a href="/web/book/index"><i class="fa fa-book fa-lg"></i> <span class="nav-label">图书管理</span></a>
+                    <a href="<?=UrlService::buildWebUrl("/book/index")?>"><i class="fa fa-book fa-lg"></i> <span class="nav-label">图书管理</span></a>
                 </li>
                 <li class="member">
-                    <a href="/web/member/index"><i class="fa fa-group fa-lg"></i> <span class="nav-label">会员列表</span></a>
+                    <a href="<?=UrlService::buildWebUrl("/member/index")?>"><i class="fa fa-group fa-lg"></i> <span class="nav-label">会员列表</span></a>
                 </li>
                 <li class="finance">
-                    <a href="/web/finance/index"><i class="fa fa-rmb fa-lg"></i> <span class="nav-label">财务管理</span></a>
+                    <a href="<?=UrlService::buildWebUrl("/finance/index")?>"><i class="fa fa-rmb fa-lg"></i> <span class="nav-label">财务管理</span></a>
                 </li>
                 <li class="market">
-                    <a href="/web/qrcode/index"><i class="fa fa-share-alt fa-lg"></i> <span class="nav-label">营销渠道</span></a>
+                    <a href="<?=UrlService::buildWebUrl("/qrcode/index")?>"><i class="fa fa-share-alt fa-lg"></i> <span class="nav-label">营销渠道</span></a>
                 </li>
                 <li class="stat">
-                    <a href="/web/stat/index"><i class="fa fa-bar-chart fa-lg"></i> <span class="nav-label">统计管理</span></a>
+                    <a href="<?=UrlService::buildWebUrl("/stat/index")?>"><i class="fa fa-bar-chart fa-lg"></i> <span class="nav-label">统计管理</span></a>
                 </li>
             </ul>
 
@@ -72,33 +73,34 @@
                         </span>
                     </li>
                     <li class="hidden">
-                        <a class="count-info" href="javascript:void(0);">
+                        <a class="count-info" href="<?=UrlService::buildNullUrl()?>;">
                             <i class="fa fa-bell"></i>
                             <span class="label label-primary">8</span>
                         </a>
                     </li>
                     <li class="dropdown user_info">
                         <a  class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">
-                            <img alt="image" class="img-circle" src="/images/web/avatar.png" />
+                            <img alt="image" class="img-circle" src="<?=UrlService::buildWwwUrl("/images/web/avatar.png")?>" />
                         </a>
                         <ul class="dropdown-menu dropdown-messages">
                             <li>
                                 <div class="dropdown-messages-box">
-                                    姓名：编程浪子郭大爷                                    <a href="/web/user/edit" class="pull-right">编辑</a>
+                                    姓名：<?=$this->params['current_user']["nickname"];?>                                    <a href="<?=UrlService::buildWebUrl("/user/edit");?>" class="pull-right">编辑</a>
                                 </div>
                             </li>
                             <li class="divider"></li>
                             <li>
                                 <div class="dropdown-messages-box">
-                                    手机号码：11012345679                                </div>
+                                    手机号码：<?=$this->params['current_user']["mobile"];?>
+                                </div>
                             </li>
                             <li class="divider"></li>
                             <li>
                                 <div class="link-block text-center">
-                                    <a class="pull-left" href="/web/user/reset-pwd">
+                                    <a class="pull-left" href="<?=UrlService::buildWebUrl("/user/reset-pwd")?>">
                                         <i class="fa fa-lock"></i> 修改密码
                                     </a>
-                                    <a class="pull-right" href="/web/user/logout">
+                                    <a class="pull-right" href="<?=UrlService::buildWebUrl("/user/logout")?>">
                                         <i class="fa fa-sign-out"></i> 退出
                                     </a>
                                 </div>

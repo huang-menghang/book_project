@@ -74,6 +74,7 @@ class BaseController extends BaseWebController
         if ($auth_token != $this->geneAuthToken($user_info)) {
             return false;
         }
+        \Yii::$app->view->params['current_user'] = $user_info;
         $this->current_user = $user_info;
         return true;
     }
