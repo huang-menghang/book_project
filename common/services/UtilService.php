@@ -24,4 +24,8 @@ class UtilService
         return Html::encode($display);
     }
 
+    public static function  getRootPath(){
+      return  dirname(\Yii::$app->vendorPath);
+    }
+
 }

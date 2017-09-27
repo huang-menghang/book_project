@@ -1,4 +1,23 @@
 ;
+upload = {
+    error:function (msg) {
+        common_ops.alert(msg);
+    },
+    success:function (image_key) {
+        var html = '<img src="'+image_key+'"/>'
+        +'<span class="fa fa-times-circle del del_image" data="'+image_key+'"></span>';
+
+        if( $(".upload_pic_wrap .pic-each").size() > 0 ){
+            $(".upload_pic_wrap .pic-each").html( html );
+        }else{
+            $(".upload_pic_wrap").append('<span class="pic-each">'+ html + '</span>');
+        }
+
+
+    }
+
+};
+
 var brand_set_ops = {
     init: function () {
         this.eventBind();
@@ -73,6 +92,12 @@ var brand_set_ops = {
 
             }
         );
+        $(".wrap_brand_set .upload_pic_wrap input[name=pic]").change(
+          function () {
+              $(".wrap_brand_set .upload_pic_wrap ").submit();
+          }
+        );
+
 
 
     }

@@ -23,7 +23,7 @@ StaticService::includeAppJsStatic("/js/web/brand/set.js", app\assets\WebAsset::c
                 <label class="col-lg-2 control-label">品牌Logo:</label>
                 <div class="col-lg-10">
                     <form class="upload_pic_wrap" target="upload_file" enctype="multipart/form-data" method="POST"
-                          action="/web/upload/pic">
+                          action="<?=UrlService::buildWebUrl("/upload/pic")?>">
                         <div class="upload_wrap pull-left">
                             <i class="fa fa-upload fa-2x"></i>
                             <input type="hidden" name="bucket" value="brand"/>
@@ -70,3 +70,4 @@ StaticService::includeAppJsStatic("/js/web/brand/set.js", app\assets\WebAsset::c
         </div>
     </div>
 </div>
+<iframe class="hide" name="upload_file" ></iframe>
