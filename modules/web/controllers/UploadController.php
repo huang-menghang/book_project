@@ -41,7 +41,6 @@ class UploadController extends BaseController
             return "<script>{$callback}.error('" . UploadService::getLastErrorMsg() . "')</script>";
         }
 
-        //return "<script>{$callback}.error('上传成功')</script>";
       return "<script>{$callback}.success('{$ret['path']}')</script>";
 
     }

@@ -40,4 +40,11 @@ class UrlService
     public static function  buildNullUrl(){
         return "javascript:void(0);";
     }
+    //  images
+    public static  function  buildPicUrl($bucket,$image_key){
+        $domain_config = \Yii::$app->params['domain'];
+        $upload_config = \Yii::$app->params['upload'];
+        return $domain_config['www'].$upload_config[$bucket]."/".$image_key;
+    }
+
 }

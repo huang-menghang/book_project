@@ -126,7 +126,7 @@ var common_ops = {
     },
     buildPicUrl:function( bucket,img_key ){
         var upload_config = eval( '(' + $(".hidden_layout_warp input[name=upload_config]").val() +')' );
-        var domain = "http://" + window.location.hostname;
+        var domain = "http://" + window.location.hostname+":"+window.location.port ;
         return domain + upload_config[ bucket ] + "/" + img_key;
     },
     alert:function( msg ,cb ){

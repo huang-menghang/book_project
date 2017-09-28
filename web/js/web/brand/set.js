@@ -4,7 +4,7 @@ upload = {
         common_ops.alert(msg);
     },
     success:function (image_key) {
-        var html = '<img src="'+image_key+'"/>'
+        var html = '<img src="'+common_ops.buildPicUrl('brand',image_key)+'"/>'
         +'<span class="fa fa-times-circle del del_image" data="'+image_key+'"></span>';
 
         if( $(".upload_pic_wrap .pic-each").size() > 0 ){
@@ -12,7 +12,7 @@ upload = {
         }else{
             $(".upload_pic_wrap").append('<span class="pic-each">'+ html + '</span>');
         }
-
+       brand_set_ops.delete_img();
 
     }
 
@@ -21,6 +21,7 @@ upload = {
 var brand_set_ops = {
     init: function () {
         this.eventBind();
+        this.delete_img();
     },
     eventBind: function () {
         $(".wrap_brand_set .save").click(
@@ -34,6 +35,9 @@ var brand_set_ops = {
                 var name_target = $(".wrap_brand_set input[name=name]");
                 var name = name_target.val();
 
+                var image_key = $(".wrap_brand_set .pic-each .del_image").attr("data");
+
+
                 var mobile_target = $(".wrap_brand_set input[name=mobile]");
                 var mobile = mobile_target.val();
 
@@ -45,6 +49,11 @@ var brand_set_ops = {
 
                 if (name.length < 1) {
                     common_ops.tip("请输入符合规范的品牌名称", name_target);
+                    return false;
+                }
+
+                if( $(".upload_pic_wrap .pic-each").size() < 1 ){
+                    common_ops.alert("请上传品牌Logo");
                     return false;
                 }
 
@@ -64,6 +73,7 @@ var brand_set_ops = {
                 }
                 btn_target.addClass("disabled");
                 var data = {
+                    image_key:image_key,
                     name:name,
                     mobile:mobile,
                     address:address,
@@ -100,9 +110,15 @@ var brand_set_ops = {
 
 
 
+    },
+    
+    delete_img:function () {
+        $(".wrap_brand_set .del_image").unbind().click( function () {
+            $(this).parent().remove();
+        });
     }
-
-
+    
+    
 };
 
 $(document).ready(function () {
