@@ -27,7 +27,9 @@ class MAsset extends AssetBundle
             'css/m/app.css?ver='.$release_version
         ];
         $this->js=[
-            "plugins/jquery-2.1.1.js"
+            "plugins/jquery-2.1.1.js",
+            "js/m/TouchSlide.1.1.js",
+            "js/m/common.js?ver=".$release_version
         ];
         parent::registerAssetFiles($view);
     }

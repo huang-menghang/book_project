@@ -21,6 +21,6 @@ class ConstantMapService
 
     public static $default_password = "******";
 
-
+    public static $default_syserror = "系统繁忙,请稍后尝试~~";
 
 }
