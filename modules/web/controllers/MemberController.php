@@ -84,7 +84,50 @@ class MemberController extends BaseController
 
     public function actionSet()
     {
-        return $this->render('set');
+     if (\Yii::$app->request->isGet){
+       $id = intval($this->get("id",0));
+       $info = [];
+       if($id){
+           $info = Member::find()->where(['id'=>$id])->one();
+       }
+         return $this->render('set',['info'=>$info]);
+     }
+
+        $id = intval($this->get("id",0));
+        $nickname = trim( $this->post("nickname","") );
+        $mobile = floatval( $this->post("mobile",0) );
+        $date_now = date("Y-m-d H:i:s");
+
+        if(mb_strlen($nickname,"utf-8") < 1){
+          return $this->renderJson([],"请输入合法的姓名",-1);
+        }
+
+        if(mb_strlen($mobile,"utf-8") < 1){
+            return $this->renderJson([],"请输入符合规范的手机号",-1);
+        }
+
+        $info = [];
+
+        if($id ){
+         $info = Member::findOne(['id'=>$id]);
+        }
+
+        if($info){
+           $model_member = $info;
+        }else{
+            $model_member = new Member();
+            $model_member -> status = 1;
+            $model_member -> avatar = ConstantMapService::$default_avatar;
+            $model_member -> created_time = $date_now;
+        }
+
+        $model_member->nickname = $nickname;
+        $model_member->mobile = $mobile;
+        $model_member->updated_time = $date_now;
+        $model_member->save( 0 );
+        return $this->renderJSON([],"操作成功~~");
+
+
     }
 
     public function  actionComment()

@@ -2,6 +2,7 @@
 
 use \app\common\services\StaticService;
 use \app\common\services\UrlService;
+use \app\common\services\ConstantMapService;
 
 StaticService::includeAppJsStatic("/js/web/member/index.js", app\assets\WebAsset::className());
 ?>
@@ -12,9 +13,10 @@ StaticService::includeAppJsStatic("/js/web/member/index.js", app\assets\WebAsset
                     <div class="row  m-t p-w-m">
                         <div class="form-group">
                             <select name="status" class="form-control inline">
-                                <option value="-1">请选择状态</option>
-                                <option value="1"  >正常</option>
-                                <option value="0"  >已删除</option>
+                                <option value="<?=ConstantMapService::$status_default;?>">请选择状态</option>
+                                <?php foreach ($status_mapping as $_status => $_title):?>
+                                    <option value="<?=$_status;?>" <?php if( $search_conditions['status']  == $_status):?> selected <?php endif;?> ><?=$_title;?></option>
+                                <?php endforeach; ?>
                             </select>
                         </div>
                         <div class="form-group">
@@ -53,10 +55,10 @@ StaticService::includeAppJsStatic("/js/web/member/index.js", app\assets\WebAsset
                     <?php if( $list):?>
                     <?php foreach ($list as $_item): ?>
                         <tr>
-                            <td><img alt="image" class="img-circle" src="<?=UrlService::buildPicUrl("avatar",$_item['avatar']);?>" style="width: 40px;height: 40px;"></td>
+                            <td><img alt="image" class="img-circle" src="<?= $_item['avatar'] ;?>" style="width: 40px;height: 40px;"></td>
                             <td><?=$_item['nickname']?></td>
                             <td><?=$_item['mobile']?></td>
-                            <td><?=$_item['sex']?></td>
+                            <td><?=$_item['sex_desc']?></td>
                             <td><?=$_item['status_desc']?></td>
                             <td>
                                 <a  href="<?=UrlService::buildWebUrl("/member/info",['id' => $_item['id']]);?>">
