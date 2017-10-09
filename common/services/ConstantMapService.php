@@ -23,4 +23,9 @@ class ConstantMapService
 
     public static $default_syserror = "系统繁忙,请稍后尝试~~";
 
+    public static $sex_mapping = [
+        1 => '女',
+        0 => '男'
+    ];
+
 }
