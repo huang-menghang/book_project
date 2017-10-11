@@ -64,12 +64,18 @@ StaticService::includeAppJsStatic("/js/web/member/index.js", app\assets\WebAsset
                                 <a  href="<?=UrlService::buildWebUrl("/member/info",['id' => $_item['id']]);?>">
                                     <i class="fa fa-eye fa-lg"></i>
                                 </a>
+                             <?php if ($_item['status']): ?>
                                 <a class="m-l" href="<?=UrlService::buildWebUrl("/member/set",['id' => $_item['id']]);?>">
                                     <i class="fa fa-edit fa-lg"></i>
                                 </a>
                                 <a class="m-l remove" href="<?=UrlService::buildNullUrl();?>" data="<?=$_item['id']?>">
                                     <i class="fa fa-trash fa-lg"></i>
                                 </a>
+                             <?php else: ?>
+                                 <a class="m-l recover" href="<?=UrlService::buildNullUrl();?>" data="<?=$_item['id']?>">
+                                     <i class="fa fa-rotate-left  fa-lg"></i>
+                                 </a>
+                             <?php endif; ?>
                             </td>
                         </tr>
                     <?php endforeach; ?>

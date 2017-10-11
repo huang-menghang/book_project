@@ -64,10 +64,11 @@ StaticService::includeAppJsStatic("/js/web/account/index.js", app\assets\WebAsse
                         <a href="<?= UrlService::buildWebUrl("/account/info", ['id' => $_item['uid']]); ?>">
                             <i class="fa fa-eye fa-lg"></i>
                         </a>
-                        <a class="m-l" href="<?= UrlService::buildWebUrl("/account/set", ['id' => $_item['uid']]); ?>">
-                            <i class="fa fa-edit fa-lg"></i>
-                        </a>
+
                         <?php if ($_item['status']): ?>
+                            <a class="m-l" href="<?= UrlService::buildWebUrl("/account/set", ['id' => $_item['uid']]); ?>">
+                                <i class="fa fa-edit fa-lg"></i>
+                            </a>
                             <a class="m-l remove" href="javascript:void(0);" data="<?= $_item['uid'] ?>">
                                 <i class="fa fa-trash fa-lg"></i>
                             </a>
