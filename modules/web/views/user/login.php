@@ -1,9 +1,12 @@
+<?php
+use \app\common\services\UrlService;
+?>
 <div class="loginColumns animated fadeInDown">
     <div class="row">
         <div class="col-md-6 text-center">
             <h2 class="font-bold">编程浪子图书商城管理后台</h2>
             <p>
-                <img src="/images/common/qrcode.jpg" width="300px"/>
+                <img src="<?=UrlService::buildWwwUrl("/images/common/qrcode.jpg");?>" width="300px"/>
             </p>
             <p class="text-danger">
                 扫描关注查看Demo
@@ -11,7 +14,7 @@
         </div>
         <div class="col-md-6">
             <div class="ibox-content">
-                <form class="m-t" role="form" action="http://book.test.com:8089/web/user/login" method="post">
+                <form class="m-t" role="form" action="<?=UrlService::buildWebUrl("/user/login");?>" method="post">
                     <div class="form-group text-center">
                         <h2 class="font-bold">登录</h2>
                     </div>
