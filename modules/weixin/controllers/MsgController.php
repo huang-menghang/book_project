@@ -17,6 +17,7 @@ class MsgController extends  BaseWebController{
         // 加密验证
 
         if (!$this->checkSignature()){
+            echo  date("Y-m-d H:i:s");
             return "error signature";
         }
 

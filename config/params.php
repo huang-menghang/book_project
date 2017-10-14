@@ -2,9 +2,9 @@
 
 return [
    "domain"=>[
-       'www'=>'https://34554540.ngrok.io',
-       'm'=>'https://34554540.ngrok.io/m',
-       'web'=>'https://34554540.ngrok.io/web'
+       'www'=>'http://book.test.com:8089',
+       'm'=>'http://book.test.com:8089/m',
+       'web'=>'http://book.test.com:8089/web'
    ],
    "upload" =>[
        "avatar" => "/uploads/avatar",

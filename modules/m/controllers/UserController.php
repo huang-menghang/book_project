@@ -11,6 +11,10 @@ class UserController extends BaseController
 
     public function  actionIndex()
     {
+        if(\Yii::$app->request->isGet){
+           return $this->render('index',['current_user'=>$this->current_user]);
+        }
+
         return $this->render('index');
     }
     public function  actionAddress(){
@@ -29,6 +33,10 @@ class UserController extends BaseController
     public function actionBind()
     {
         return $this->render('bind');
+
+
+
+
     }
 
     public function  actionCart(){
