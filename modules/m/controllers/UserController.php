@@ -2,6 +2,8 @@
 
 namespace app\modules\m\controllers;
 
+use app\common\services\ConstantMapService;
+use app\common\services\UtilService;
 use app\models\member\Member;
 use app\modules\m\controllers\common\BaseController;
 use app\models\sms\SmsCaptcha;
@@ -71,13 +73,20 @@ class UserController extends BaseController
             $this->renderJSON([], "手机号码已经注册~~", -1);
            }
            $modle_member = new Member();
-
-
-
-
+           $modle_member ->nickname= $mobile;
+           $modle_member ->mobile = $mobile;
+           $modle_member ->setSalt();
+           $modle_member ->avatar = ConstantMapService::$default_avatar;
+           $modle_member ->reg_ip = sprintf("%u",ip2long(UtilService::getIP()));
+           $modle_member ->status = 1;
+           $modle_member ->created_time = $modle_member->updated_time = date("Y-m-d H:i:s");
+           $modle_member ->save(0);
+           $member_info = $modle_member;
         }
 
-
+        if(!$member_info || !$member_info['status']){
+            return $this->renderJSON([], "你的账户已被禁止,请联系客服~~", -1);
+        }
 
         return $this->renderJSON([], "绑定成功~~", -1);
 
